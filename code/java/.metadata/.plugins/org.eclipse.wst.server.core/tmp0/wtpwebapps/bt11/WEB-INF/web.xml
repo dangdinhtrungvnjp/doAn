@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>bt11</display-name>
+  <welcome-file-list>
+    <welcome-file>dangNhap.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description></description>
+    <display-name>DangNhapServlet</display-name>
+    <servlet-name>DangNhapServlet</servlet-name>
+    <servlet-class>controller.DangNhapServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DangNhapServlet</servlet-name>
+    <url-pattern>/DangNhapServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DangNhapThanhCongServlet</display-name>
+    <servlet-name>DangNhapThanhCongServlet</servlet-name>
+    <servlet-class>controller.DangNhapThanhCongServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DangNhapThanhCongServlet</servlet-name>
+    <url-pattern>/DangNhapThanhCongServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ThemNguoiDungServlet</display-name>
+    <servlet-name>ThemNguoiDungServlet</servlet-name>
+    <servlet-class>controller.ThemNguoiDungServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ThemNguoiDungServlet</servlet-name>
+    <url-pattern>/ThemNguoiDungServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description></description>
+  	<display-name>ThemNguoiDungThanhCongServlet</display-name>
+  	<servlet-name>ThemNguoiDungThanhCongServlet</servlet-name>
+  	<servlet-class>controller.ThemNguoiDungThanhCongServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ThemNguoiDungThanhCongServlet</servlet-name>
+  	<url-pattern>/ThemNguoiDungThanhCongServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<display-name>DanhSachNhanVienServlet</display-name>
+  	<servlet-name>DanhSachNhanVienServlet</servlet-name>
+  	<servlet-class>controller.DanhSachNhanVienServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DanhSachNhanVienServlet</servlet-name>
+  	<url-pattern>/DanhSachNhanVienServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+        <servlet-name>jerseyServlet</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.config.property.packages</param-name>
+            <param-value>controller</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>  
+  </servlet>
+  <servlet-mapping>
+        <servlet-name>jerseyServlet</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>  
+</web-app>
